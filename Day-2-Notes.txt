@@ -1,0 +1,89 @@
+1. Windows and Objects in Js
+
+
+
+
+2. 
+
+
+Primitive data types ( Number, String, Boolean) -> Immutable
+
+
+Example:
+
+let obj={
+	name:"Harish",
+	email:"rv@gmail.com",
+	city:"Madurai"
+}
+
+
+spread operator is used for deep clone
+
+let data=obj   -> Shallow copy or Mutable or Copy by reference
+
+let details={...obj} -> Deep copy or Immutable or Copy by value.
+
+let a ={
+    name:"HARISH",
+    age:"20",
+    address:{
+    no:"09",
+    street:"Lakshmi Nagar"
+    }
+}
+
+let b={...a}
+
+b.name="Raajaa"
+b.address.no="10"
+
+console.log(a,b)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+let a ={
+    name:"HARISH",
+    age:"20",
+    address:{
+    no:"09",
+    street:"Lakshmi Nagar"
+    }
+}
+
+let b=JSON.parse(JSON.stringify(a))
+
+b.name="Raajaa"
+b.address.no="10"
+
+//console.log(a)
+//console.log(b)
+
+let c=[10,20,30,40,50]
+
+let d=[...c]
+
+d.push(60)
+
+console.log(c)
+console.log(d)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Deep copy is not happening for Nested Objects.
+
+To acheive this 
+
+Method:1
+JSON.stringify() -> Converts obj to string
+JSON.parse() -> Converts string to Obj
+
+Method:2
+structuredclone()
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+XMLHTTPrequest
+
+
+
